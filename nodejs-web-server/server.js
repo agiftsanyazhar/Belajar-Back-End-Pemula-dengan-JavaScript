@@ -39,14 +39,14 @@ const requestListener = (req, res) => {
       res.statusCode = 200;
       res.end(
         JSON.stringify({
-          message: "Ini adalah homepage",
+          message: "Ini adalah homepage.",
         })
       );
     } else {
       res.statusCode = 400;
       res.end(
         JSON.stringify({
-          message: `Halaman homepage tidak dapat diakses dengan ${method} request`,
+          message: `Halaman homepage tidak dapat diakses dengan ${method} request.`,
         })
       );
     }
@@ -55,7 +55,7 @@ const requestListener = (req, res) => {
       res.statusCode = 200;
       res.end(
         JSON.stringify({
-          message: "Ini adalah about",
+          message: "Ini adalah about.",
         })
       );
     } else if (method === "POST") {
@@ -71,7 +71,7 @@ const requestListener = (req, res) => {
         const { name } = JSON.parse(body);
         res.end(
           JSON.stringify({
-            message: `Halo, ${name}! Ini adalah about`,
+            message: `Halo, ${name}! Ini adalah about.`,
           })
         );
       });
@@ -79,7 +79,7 @@ const requestListener = (req, res) => {
       res.statusCode = 400;
       res.end(
         JSON.stringify({
-          message: `Halaman about tidak dapat diakses dengan ${method} request`,
+          message: `Halaman about tidak dapat diakses dengan ${method} request.`,
         })
       );
     }
